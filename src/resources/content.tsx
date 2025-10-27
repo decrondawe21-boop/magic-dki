@@ -2,9 +2,9 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
+  firstName: "David",
+  lastName: "Kozák",
+  name: `David Kozák`,
   role: "Design Engineer",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
@@ -133,9 +133,9 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "David Kozák International, s.r.o.",
+        timeframe: "2025 - ????",
+        role: "Owner and priject mannager",
         achievements: [
           <>
             Developed a design system that unified the brand across multiple platforms, improving
