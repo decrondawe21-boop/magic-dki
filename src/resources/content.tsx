@@ -1,10 +1,10 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "David",
   lastName: "Kozák",
-  name: `David Kozák`,
+  name: "David Kozák",
   role: "Design Engineer",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
@@ -98,9 +98,12 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      David is a Czech-based creative strategist and founder of REST||ART INTEGRACE, a social enterprise
+      focused on resocialization, reintegration, and sustainable impact. He blends emotional resonance
+      with technical precision to craft visual identities, investor materials, and campaign assets that
+      drive meaningful change. His work spans international legal correspondence, multi-language branding,
+      and the convergence of design, diplomacy, and social innovation.
+
       </>
     ),
   },
@@ -109,26 +112,20 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "David Kozák International,",
+        timeframe: "2025 - Present",
+        role: "Design Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
+        // můžeš sem přidat konkrétní úspěchy jako stringy
+        "Led redesign of core UI components for accessibility.",
+        "Integrated REST||ART branding into enterprise design system.",
+      ],
+      images: [
+        {
+          src: "/images/projects/project-01/cover-01.jpg",
+          alt: "Once UI Project",
+          width: 16,
+          height: 9,
           },
         ],
       },
@@ -137,21 +134,14 @@ const about: About = {
         timeframe: "2025 - ????",
         role: "Owner and priject mannager",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
