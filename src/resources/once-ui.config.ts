@@ -38,30 +38,33 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { Geist } from "next/font/google";
-import { Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const heading = Geist({
+const heading = Poppins({
   variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
-const body = Geist({
+const body = Poppins({
   variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
-const label = Geist({
+const label = Poppins({
   variable: "--font-label",
   subsets: ["latin"],
+  weight: ["500", "600"],
   display: "swap",
 });
 
-const code = Geist_Mono({
+const code = Poppins({
   variable: "--font-code",
   subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -74,14 +77,14 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
-  theme: "dark", // dark | light | system
+  theme: "light", // dark | light | system
   neutral: "gray", // sand | gray | slate | custom
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
-  solidStyle: "plastic", // flat | plastic
-  border: "conservative", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
+  solidStyle: "flat", // flat | plastic
+  border: "playful", // rounded | playful | conservative
+  surface: "filled", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };
@@ -108,34 +111,34 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 30,
     x: 50,
-    y: 60,
+    y: 20,
     width: 100,
-    height: 50,
+    height: 60,
     tilt: 0,
     colorStart: "accent-background-strong",
     colorEnd: "page-background",
   },
   dots: {
-    display: true,
+    display: false,
     opacity: 40,
     size: "2",
     color: "brand-background-strong",
   },
   grid: {
-    display: false,
-    opacity: 100,
-    color: "neutral-alpha-medium",
+    display: true,
+    opacity: 20,
+    color: "neutral-alpha-weak",
     width: "0.25rem",
     height: "0.25rem",
   },
   lines: {
-    display: false,
-    opacity: 100,
-    color: "neutral-alpha-weak",
-    size: "16",
+    display: true,
+    opacity: 15,
+    color: "accent-alpha-weak",
+    size: "32",
     thickness: 1,
     angle: 45,
   },
