@@ -236,3 +236,40 @@ export interface Gallery extends BasePageConfig {
     orientation: string;
   }>;
 }
+
+/**
+ * Pricing page configuration.
+ * @description Configuration for the Pricing page with subscription tiers.
+ */
+export interface Pricing extends BasePageConfig {
+  /** Headline of the pricing page */
+  headline: React.ReactNode;
+  /** Subline text below headline */
+  subline: React.ReactNode;
+  /** Pricing tiers */
+  tiers: Array<{
+    /** Name of the tier */
+    name: string;
+    /** Price in CZK */
+    price: string;
+    /** Price period */
+    period: string;
+    /** Description of the tier */
+    description: string;
+    /** List of features */
+    features: string[];
+    /** Whether this is the highlighted/recommended tier */
+    highlighted?: boolean;
+    /** CTA button text */
+    cta: string;
+    /** CTA button link */
+    ctaLink: string;
+  }>;
+  /** Free trial information */
+  trial: {
+    /** Whether to display trial info */
+    display: boolean;
+    /** Trial period description */
+    description: string;
+  };
+}

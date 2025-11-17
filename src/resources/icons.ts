@@ -12,6 +12,9 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiOutlineCurrencyDollar,
+  HiCheck,
+  HiCheckCircle,
 } from "react-icons/hi2";
 
 import {
@@ -43,6 +46,9 @@ export const iconLibrary: Record<string, IconType> = {
   calendar: HiCalendarDays,
   home: PiHouseDuotone,
   gallery: PiImageDuotone,
+  receipt: HiOutlineCurrencyDollar,
+  check: HiCheck,
+  checkCircle: HiCheckCircle,
   discord: FaDiscord,
   eye: HiOutlineEye,
   eyeOff: HiOutlineEyeSlash,
