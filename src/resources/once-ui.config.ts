@@ -14,14 +14,15 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://magic.david-kozak.com";
+const baseURL: string = "https://f-studio.cz";
 
 const routes: RoutesConfig = {
   "/": true,
+  "/pricing": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/blog": false,
+  "/gallery": false,
 };
 
 const display: DisplayConfig = {
@@ -188,9 +189,9 @@ const mailchimp: MailchimpConfig = {
 const schema: SchemaConfig = {
   logo: "public\images\logo.png",
   type: "Company",
-  name: "Magic site",
+  name: "F-STUDIO",
   description: home.description,
-  email: "international@david-kozak.com",
+  email: "info@f-studio.cz",
 };
 
 // social links

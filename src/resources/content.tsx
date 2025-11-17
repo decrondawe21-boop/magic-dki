@@ -1,21 +1,21 @@
-import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Pricing, Social, Work } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "David",
-  lastName: "Kozák",
-  name: "David Kozák",
-  role: "Design Engineer",
+  firstName: "F-STUDIO",
+  lastName: "",
+  name: "F-STUDIO",
+  role: "Ekonomický systém pro správu podnikání",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "info@f-studio.cz",
+  location: "Europe/Prague", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Čeština", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Přihlaste se k odběru novinek F-STUDIO</>,
+  description: <>Získejte nejnovější informace o funkcích a aktualizacích</>,
 };
 
 const social: Social = [
@@ -24,17 +24,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://github.com/decrondawe21-boop/corporate-app",
   },
   {
     name: "Email",
@@ -46,174 +36,113 @@ const social: Social = [
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Domů",
+  title: `F-STUDIO - Ekonomický systém pro správu podnikání`,
+  description: `Komplexní a moderní řešení pro správu malých a středních podniků`,
+  headline: <>Profesionální správa vašeho podnikání</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">F-STUDIO</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Měsíc zdarma
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/pricing",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      F-STUDIO je komplexní ekonomický systém pro moderní správu malých a středních podniků.
+      <br /> Vytvořeno pro maximální efektivitu a jednoduchost použití.
     </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "O nás",
+  title: `O F-STUDIO`,
+  description: `Komplexní ekonomický systém pro moderní správu podnikání`,
   tableOfContent: {
     display: true,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "O F-STUDIO",
     description: (
       <>
-      David is a Czech-based creative strategist and founder of REST||ART INTEGRACE, a social enterprise
-      focused on resocialization, reintegration, and sustainable impact. He blends emotional resonance
-      with technical precision to craft visual identities, investor materials, and campaign assets that
-      drive meaningful change. His work spans international legal correspondence, multi-language branding,
-      and the convergence of design, diplomacy, and social innovation.
-
+      F-STUDIO je moderní ekonomický systém navržený pro komplexní správu malých a středních podniků.
+      Nabízíme profesionální nástroje pro účetnictví, fakturaci, skladové hospodářství, CRM a další
+      funkce nezbytné pro efektivní řízení vašeho podnikání. Náš systém je navržen s důrazem na
+      jednoduchost použití a maximální produktivitu.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Klíčové funkce",
     experiences: [
       {
-        company: "David Kozák International,",
-        timeframe: "2025 - Present",
-        role: "Design Engineer",
+        company: "Účetnictví a Finance",
+        timeframe: "",
+        role: "Komplexní správa financí",
         achievements: [
-        // můžeš sem přidat konkrétní úspěchy jako stringy
-        "Led redesign of core UI components for accessibility.",
-        "Integrated REST||ART branding into enterprise design system.",
-      ],
-      images: [
-        {
-          src: "/images/projects/project-01/cover-01.jpg",
-          alt: "Once UI Project",
-          width: 16,
-          height: 9,
-          },
+          "Automatizované účetní operace",
+          "Přehledné finanční reporty",
+          "Integrace s bankovními účty",
         ],
+        images: [],
       },
       {
-        company: "David Kozák International, s.r.o.",
-        timeframe: "2025 - ????",
-        role: "Owner and priject mannager",
+        company: "Fakturace a Objednávky",
+        timeframe: "",
+        role: "Profesionální správa dokumentů",
         achievements: [
-
+          "Vytváření faktur a nabídek",
+          "Automatické připomínky plateb",
+          "Export do různých formátů",
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: false, // set to false to hide this section
+    display: false,
     title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
+    institutions: [],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technologie",
     skills: [
       {
-        title: "Figma",
+        title: "Moderní technologie",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Postaveno na nejnovějších technologiích pro maximální výkon a bezpečnost.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "TypeScript",
+            icon: "javascript",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+        images: [],
+      },
     ],
   },
 };
@@ -221,17 +150,17 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Novinky a články",
+  description: `Nejnovější novinky z F-STUDIO`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Reference",
+  title: `Reference – F-STUDIO`,
+  description: `Projekty a reference F-STUDIO`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -287,4 +216,86 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const pricing: Pricing = {
+  path: "/pricing",
+  label: "Ceník",
+  title: "Ceník F-STUDIO",
+  description: "Vyberte si předplatné F-STUDIO pro váš podnik",
+  image: "/images/og/pricing.jpg",
+  headline: <>Profesionální řešení pro váš podnik</>,
+  subline: <>Vyberte si balíček, který nejlépe vyhovuje potřebám vašeho podnikání. Měsíc na vyzkoušení zdarma.</>,
+  tiers: [
+    {
+      name: "Mikro",
+      price: "350 Kč",
+      period: "za uživatele / měsíc",
+      description: "Ideální pro malé firmy a začínající podnikatele",
+      features: [
+        "Základní účetnictví",
+        "Fakturace a nabídky",
+        "Správa kontaktů",
+        "Základní reporting",
+        "Email podpora",
+      ],
+      cta: "Začít zdarma",
+      ctaLink: "#contact",
+    },
+    {
+      name: "Střední",
+      price: "950 Kč",
+      period: "za uživatele / měsíc",
+      description: "Pro rostoucí firmy s pokročilými potřebami",
+      features: [
+        "Vše z balíčku Mikro",
+        "Pokročilé účetnictví",
+        "Skladové hospodářství",
+        "CRM systém",
+        "Detailní analytika",
+        "Prioritní podpora",
+        "API integrace",
+      ],
+      highlighted: true,
+      cta: "Začít zdarma",
+      ctaLink: "#contact",
+    },
+    {
+      name: "Business",
+      price: "Na míru",
+      period: "sestaveno podle potřeb",
+      description: "Řešení přizpůsobené přesně vašim požadavkům",
+      features: [
+        "Vše z balíčku Střední",
+        "Vlastní funkce na míru",
+        "Dedikovaný account manager",
+        "Školení zaměstnanců",
+        "24/7 Premium podpora",
+        "SLA garance",
+        "On-premise možnost",
+      ],
+      cta: "Kontaktovat nás",
+      ctaLink: "#contact",
+    },
+    {
+      name: "PREMIUM",
+      price: "5 000 Kč",
+      period: "měsíc (4 uživatelé v ceně)",
+      description: "Kompletní balíček pro malé týmy",
+      features: [
+        "Vše z balíčku Střední",
+        "4 uživatelé v základní ceně",
+        "Další uživatelé: 950 Kč/měsíc",
+        "Premium podpora",
+        "Měsíční konzultace",
+        "Prioritní vývoj funkcí",
+      ],
+      cta: "Začít zdarma",
+      ctaLink: "#contact",
+    },
+  ],
+  trial: {
+    display: true,
+    description: "Všechny balíčky zahrnují měsíc zkušební doby zdarma. Bez závazků, kdykoliv lze zrušit.",
+  },
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, pricing };
