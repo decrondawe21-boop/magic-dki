@@ -93,11 +93,14 @@ export default function Pricing() {
               gap="24"
               padding="32"
               radius="l"
-              border="neutral-alpha-weak"
+              border="neutral-alpha-medium"
               background={tier.highlighted ? "accent-alpha-weak" : "surface"}
+              shadow="l"
               style={{
                 position: "relative",
                 transform: tier.highlighted ? "scale(1.05)" : "scale(1)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
               }}
             >
               {tier.highlighted && (

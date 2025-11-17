@@ -83,8 +83,8 @@ const style: StyleConfig = {
   accent: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "filled", // filled | translucent
+  border: "conservative", // rounded | playful | conservative
+  surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };
@@ -112,35 +112,35 @@ const effects: EffectsConfig = {
   },
   gradient: {
     display: true,
-    opacity: 30,
-    x: 50,
-    y: 20,
-    width: 100,
-    height: 60,
-    tilt: 0,
+    opacity: 40,
+    x: 30,
+    y: 30,
+    width: 80,
+    height: 80,
+    tilt: 15,
     colorStart: "accent-background-strong",
-    colorEnd: "page-background",
+    colorEnd: "brand-background-strong",
   },
   dots: {
-    display: false,
-    opacity: 40,
-    size: "2",
-    color: "brand-background-strong",
+    display: true,
+    opacity: 30,
+    size: "4",
+    color: "accent-background-strong",
   },
   grid: {
     display: true,
-    opacity: 20,
-    color: "neutral-alpha-weak",
-    width: "0.25rem",
-    height: "0.25rem",
+    opacity: 35,
+    color: "accent-alpha-medium",
+    width: "0.5rem",
+    height: "0.5rem",
   },
   lines: {
     display: true,
-    opacity: 15,
-    color: "accent-alpha-weak",
-    size: "32",
-    thickness: 1,
-    angle: 45,
+    opacity: 25,
+    color: "brand-alpha-medium",
+    size: "24",
+    thickness: 2,
+    angle: 60,
   },
 };
 
